@@ -1,0 +1,697 @@
+[       0.033] Reading: matpower/case1888rte/2017-01-21
+[       2.724] Read problem in 2.69 seconds
+[       3.461] Computing injection shift factors...
+[       4.418] Computed ISF in 0.96 seconds
+[       4.418] Computing line outage factors...
+[       5.478] Computed LODF in 1.06 seconds
+[       5.478] Applying PTDF and LODF cutoffs (0.00500, 0.00100)
+[       5.701] Building model...
+[      16.955] Built model in 11.25 seconds
+[      16.955] Setting names...
+[      16.955] Setting variable and constraint names...
+[      18.548] Set names in 1.59 seconds
+[      18.548] Exporting initial model without transmission constraints to /local_workspace/kazaalek/uc/results_default/matpower/case1888rte/2017-01-21.1.init.mps.gz
+[      44.437] Optimizing...
+[      44.589] MIP gap tolerance set to 0.010000
+[      44.590] Setting MILP time limit to 1199.85 seconds
+[      44.637] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 270740 rows, 352692 columns and 959115 nonzeros
+Model fingerprint: 0x002136c4
+Variable types: 290844 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+Presolve removed 123744 rows and 242039 columns
+Presolve time: 2.93s
+Presolved: 146996 rows, 110653 columns, 555793 nonzeros
+Variable types: 63324 continuous, 47329 integer (47329 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   79910    9.2701915e+08   1.190130e+00   5.844030e+07      5s
+   85455    5.4963830e+07   0.000000e+00   5.243569e+08      6s
+  135366    2.9620944e+07   0.000000e+00   4.671556e+07     10s
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.246281e+07, 39681 iterations, 7.04 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.2463e+07    0  167          - 2.2463e+07      -     -   11s
+H    0     0                    2.248588e+07 2.2463e+07  0.10%     -   11s
+
+Explored 1 nodes (40669 simplex iterations) in 11.97 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 1: 2.24859e+07 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 2.248587808503e+07, best bound 2.246280576631e+07, gap 0.1026%
+[      63.331] Verifying transmission limits...
+[      69.060] Verified transmission limits in 5.73 seconds
+[      69.061]      621.000 MW overflow in l2315 time   1 (pre-contingency)
+[      69.250]      725.340 MW overflow in l2425 time   1 (pre-contingency)
+[      69.251]      864.290 MW overflow in l2432 time   1 (pre-contingency)
+[      69.252]      901.560 MW overflow in l2284 time   1 (pre-contingency)
+[      69.253]      904.520 MW overflow in l2285 time   1 (pre-contingency)
+[      69.254]      621.000 MW overflow in l2315 time   2 (pre-contingency)
+[      69.255]      683.158 MW overflow in l2425 time   2 (pre-contingency)
+[      69.255]      864.290 MW overflow in l2432 time   2 (pre-contingency)
+[      69.256]      901.560 MW overflow in l2284 time   2 (pre-contingency)
+[      69.257]      904.520 MW overflow in l2285 time   2 (pre-contingency)
+[      69.257]      505.000 MW overflow in l2314 time   3 (pre-contingency)
+[      69.258]      621.000 MW overflow in l2315 time   3 (pre-contingency)
+[      69.259]      864.290 MW overflow in l2432 time   3 (pre-contingency)
+[      69.260]      901.560 MW overflow in l2284 time   3 (pre-contingency)
+[      69.261]      904.520 MW overflow in l2285 time   3 (pre-contingency)
+[      69.261]      505.000 MW overflow in l2314 time   4 (pre-contingency)
+[      69.262]      621.000 MW overflow in l2315 time   4 (pre-contingency)
+[      69.263]      864.290 MW overflow in l2432 time   4 (pre-contingency)
+[      69.264]      901.560 MW overflow in l2284 time   4 (pre-contingency)
+[      69.264]      904.520 MW overflow in l2285 time   4 (pre-contingency)
+[      69.265]      505.000 MW overflow in l2314 time   5 (pre-contingency)
+[      69.266]      621.000 MW overflow in l2315 time   5 (pre-contingency)
+[      69.267]      864.290 MW overflow in l2432 time   5 (pre-contingency)
+[      69.267]      901.560 MW overflow in l2284 time   5 (pre-contingency)
+[      69.268]      904.520 MW overflow in l2285 time   5 (pre-contingency)
+[      69.269]      621.000 MW overflow in l2315 time   6 (pre-contingency)
+[      69.270]      725.340 MW overflow in l2425 time   6 (pre-contingency)
+[      69.271]      864.290 MW overflow in l2432 time   6 (pre-contingency)
+[      69.271]      901.560 MW overflow in l2284 time   6 (pre-contingency)
+[      69.272]      904.520 MW overflow in l2285 time   6 (pre-contingency)
+[      69.273]      621.000 MW overflow in l2315 time   7 (pre-contingency)
+[      69.273]      725.340 MW overflow in l2425 time   7 (pre-contingency)
+[      69.274]      864.290 MW overflow in l2432 time   7 (pre-contingency)
+[      69.275]      901.560 MW overflow in l2284 time   7 (pre-contingency)
+[      69.276]      904.520 MW overflow in l2285 time   7 (pre-contingency)
+[      69.276]      780.000 MW overflow in l2314 time   8 (pre-contingency)
+[      69.277]      864.290 MW overflow in l2432 time   8 (pre-contingency)
+[      69.278]      896.000 MW overflow in l2315 time   8 (pre-contingency)
+[      69.279]      901.560 MW overflow in l2284 time   8 (pre-contingency)
+[      69.279]      904.520 MW overflow in l2285 time   8 (pre-contingency)
+[      69.280]      780.000 MW overflow in l2314 time   9 (pre-contingency)
+[      69.281]      864.290 MW overflow in l2432 time   9 (pre-contingency)
+[      69.282]      896.000 MW overflow in l2315 time   9 (pre-contingency)
+[      69.282]      901.560 MW overflow in l2284 time   9 (pre-contingency)
+[      69.283]      904.520 MW overflow in l2285 time   9 (pre-contingency)
+[      69.283]      864.290 MW overflow in l2432 time  10 (pre-contingency)
+[      69.285]      896.000 MW overflow in l2315 time  10 (pre-contingency)
+[      69.285]      901.560 MW overflow in l2284 time  10 (pre-contingency)
+[      69.286]      904.520 MW overflow in l2285 time  10 (pre-contingency)
+[      69.287]      983.280 MW overflow in l2425 time  10 (pre-contingency)
+[      69.287]      864.290 MW overflow in l2432 time  11 (pre-contingency)
+[      69.288]      896.000 MW overflow in l2315 time  11 (pre-contingency)
+[      69.289]      901.560 MW overflow in l2284 time  11 (pre-contingency)
+[      69.290]      904.520 MW overflow in l2285 time  11 (pre-contingency)
+[      69.290]      983.280 MW overflow in l2425 time  11 (pre-contingency)
+[      69.291]      864.290 MW overflow in l2432 time  12 (pre-contingency)
+[      69.292]      896.000 MW overflow in l2315 time  12 (pre-contingency)
+[      69.293]      901.560 MW overflow in l2284 time  12 (pre-contingency)
+[      69.293]      904.520 MW overflow in l2285 time  12 (pre-contingency)
+[      69.294]      983.280 MW overflow in l2425 time  12 (pre-contingency)
+[      69.295]      780.000 MW overflow in l2314 time  13 (pre-contingency)
+[      69.296]      864.290 MW overflow in l2432 time  13 (pre-contingency)
+[      69.297]      896.000 MW overflow in l2315 time  13 (pre-contingency)
+[      69.297]      901.560 MW overflow in l2284 time  13 (pre-contingency)
+[      69.298]      904.520 MW overflow in l2285 time  13 (pre-contingency)
+[      69.299]      780.000 MW overflow in l2314 time  14 (pre-contingency)
+[      69.300]      864.290 MW overflow in l2432 time  14 (pre-contingency)
+[      69.301]      896.000 MW overflow in l2315 time  14 (pre-contingency)
+[      69.301]      901.560 MW overflow in l2284 time  14 (pre-contingency)
+[      69.302]      904.520 MW overflow in l2285 time  14 (pre-contingency)
+[      69.303]      780.000 MW overflow in l2314 time  15 (pre-contingency)
+[      69.304]      864.290 MW overflow in l2432 time  15 (pre-contingency)
+[      69.304]      896.000 MW overflow in l2315 time  15 (pre-contingency)
+[      69.305]      901.560 MW overflow in l2284 time  15 (pre-contingency)
+[      69.306]      904.520 MW overflow in l2285 time  15 (pre-contingency)
+[      69.306]      780.000 MW overflow in l2314 time  16 (pre-contingency)
+[      69.307]      864.290 MW overflow in l2432 time  16 (pre-contingency)
+[      69.308]      896.000 MW overflow in l2315 time  16 (pre-contingency)
+[      69.309]      901.560 MW overflow in l2284 time  16 (pre-contingency)
+[      69.309]      904.520 MW overflow in l2285 time  16 (pre-contingency)
+[      69.310]      780.000 MW overflow in l2314 time  17 (pre-contingency)
+[      69.311]      864.290 MW overflow in l2432 time  17 (pre-contingency)
+[      69.312]      896.000 MW overflow in l2315 time  17 (pre-contingency)
+[      69.313]      901.560 MW overflow in l2284 time  17 (pre-contingency)
+[      69.313]      904.520 MW overflow in l2285 time  17 (pre-contingency)
+[      69.314]      864.290 MW overflow in l2432 time  18 (pre-contingency)
+[      69.315]      896.000 MW overflow in l2315 time  18 (pre-contingency)
+[      69.316]      901.560 MW overflow in l2284 time  18 (pre-contingency)
+[      69.317]      904.520 MW overflow in l2285 time  18 (pre-contingency)
+[      69.317]      983.280 MW overflow in l2425 time  18 (pre-contingency)
+[      69.318]      864.290 MW overflow in l2432 time  19 (pre-contingency)
+[      69.319]      896.000 MW overflow in l2315 time  19 (pre-contingency)
+[      69.320]      901.560 MW overflow in l2284 time  19 (pre-contingency)
+[      69.321]      904.520 MW overflow in l2285 time  19 (pre-contingency)
+[      69.321]      983.280 MW overflow in l2425 time  19 (pre-contingency)
+[      69.322]      864.290 MW overflow in l2432 time  20 (pre-contingency)
+[      69.323]      896.000 MW overflow in l2315 time  20 (pre-contingency)
+[      69.324]      901.560 MW overflow in l2284 time  20 (pre-contingency)
+[      69.325]      904.520 MW overflow in l2285 time  20 (pre-contingency)
+[      69.325]      983.280 MW overflow in l2425 time  20 (pre-contingency)
+[      69.326]      864.290 MW overflow in l2432 time  21 (pre-contingency)
+[      69.327]      896.000 MW overflow in l2315 time  21 (pre-contingency)
+[      69.328]      901.560 MW overflow in l2284 time  21 (pre-contingency)
+[      69.328]      904.520 MW overflow in l2285 time  21 (pre-contingency)
+[      69.329]      983.280 MW overflow in l2425 time  21 (pre-contingency)
+[      69.330]      780.000 MW overflow in l2314 time  22 (pre-contingency)
+[      69.331]      864.290 MW overflow in l2432 time  22 (pre-contingency)
+[      69.332]      896.000 MW overflow in l2315 time  22 (pre-contingency)
+[      69.332]      901.560 MW overflow in l2284 time  22 (pre-contingency)
+[      69.333]      904.520 MW overflow in l2285 time  22 (pre-contingency)
+[      69.334]      780.000 MW overflow in l2314 time  23 (pre-contingency)
+[      69.335]      864.290 MW overflow in l2432 time  23 (pre-contingency)
+[      69.336]      896.000 MW overflow in l2315 time  23 (pre-contingency)
+[      69.336]      901.560 MW overflow in l2284 time  23 (pre-contingency)
+[      69.337]      904.520 MW overflow in l2285 time  23 (pre-contingency)
+[      69.338]      621.000 MW overflow in l2315 time  24 (pre-contingency)
+[      69.339]      725.340 MW overflow in l2425 time  24 (pre-contingency)
+[      69.340]      864.290 MW overflow in l2432 time  24 (pre-contingency)
+[      69.340]      901.560 MW overflow in l2284 time  24 (pre-contingency)
+[      69.341]      904.520 MW overflow in l2285 time  24 (pre-contingency)
+[      69.342]      542.297 MW overflow in l2425 time  25 (pre-contingency)
+[      69.343]      621.000 MW overflow in l2315 time  25 (pre-contingency)
+[      69.344]      864.290 MW overflow in l2432 time  25 (pre-contingency)
+[      69.344]      901.560 MW overflow in l2284 time  25 (pre-contingency)
+[      69.345]      904.520 MW overflow in l2285 time  25 (pre-contingency)
+[      69.346]      505.000 MW overflow in l2314 time  26 (pre-contingency)
+[      69.347]      621.000 MW overflow in l2315 time  26 (pre-contingency)
+[      69.348]      864.290 MW overflow in l2432 time  26 (pre-contingency)
+[      69.348]      901.560 MW overflow in l2284 time  26 (pre-contingency)
+[      69.349]      904.520 MW overflow in l2285 time  26 (pre-contingency)
+[      69.350]      467.390 MW overflow in l2425 time  27 (pre-contingency)
+[      69.351]      505.000 MW overflow in l2314 time  27 (pre-contingency)
+[      69.352]      864.290 MW overflow in l2432 time  27 (pre-contingency)
+[      69.352]      901.560 MW overflow in l2284 time  27 (pre-contingency)
+[      69.353]      904.520 MW overflow in l2285 time  27 (pre-contingency)
+[      69.354]      467.390 MW overflow in l2425 time  28 (pre-contingency)
+[      69.355]      505.000 MW overflow in l2314 time  28 (pre-contingency)
+[      69.356]      864.290 MW overflow in l2432 time  28 (pre-contingency)
+[      69.356]      901.560 MW overflow in l2284 time  28 (pre-contingency)
+[      69.357]      904.520 MW overflow in l2285 time  28 (pre-contingency)
+[      69.358]      505.000 MW overflow in l2314 time  29 (pre-contingency)
+[      69.359]      565.036 MW overflow in l2315 time  29 (pre-contingency)
+[      69.360]      864.290 MW overflow in l2432 time  29 (pre-contingency)
+[      69.360]      901.560 MW overflow in l2284 time  29 (pre-contingency)
+[      69.361]      904.520 MW overflow in l2285 time  29 (pre-contingency)
+[      69.362]      505.000 MW overflow in l2314 time  30 (pre-contingency)
+[      69.363]      621.000 MW overflow in l2315 time  30 (pre-contingency)
+[      69.364]      864.290 MW overflow in l2432 time  30 (pre-contingency)
+[      69.364]      901.560 MW overflow in l2284 time  30 (pre-contingency)
+[      69.365]      904.520 MW overflow in l2285 time  30 (pre-contingency)
+[      69.366]      621.000 MW overflow in l2315 time  31 (pre-contingency)
+[      69.367]      725.340 MW overflow in l2425 time  31 (pre-contingency)
+[      69.368]      864.290 MW overflow in l2432 time  31 (pre-contingency)
+[      69.369]      901.560 MW overflow in l2284 time  31 (pre-contingency)
+[      69.369]      904.520 MW overflow in l2285 time  31 (pre-contingency)
+[      69.370]      780.000 MW overflow in l2314 time  32 (pre-contingency)
+[      69.371]      864.290 MW overflow in l2432 time  32 (pre-contingency)
+[      69.372]      896.000 MW overflow in l2315 time  32 (pre-contingency)
+[      69.373]      901.560 MW overflow in l2284 time  32 (pre-contingency)
+[      69.373]      904.520 MW overflow in l2285 time  32 (pre-contingency)
+[      69.374]      780.000 MW overflow in l2314 time  33 (pre-contingency)
+[      69.375]      864.290 MW overflow in l2432 time  33 (pre-contingency)
+[      69.376]      896.000 MW overflow in l2315 time  33 (pre-contingency)
+[      69.377]      901.560 MW overflow in l2284 time  33 (pre-contingency)
+[      69.377]      904.520 MW overflow in l2285 time  33 (pre-contingency)
+[      69.378]      864.290 MW overflow in l2432 time  34 (pre-contingency)
+[      69.379]      896.000 MW overflow in l2315 time  34 (pre-contingency)
+[      69.380]      901.560 MW overflow in l2284 time  34 (pre-contingency)
+[      69.381]      904.520 MW overflow in l2285 time  34 (pre-contingency)
+[      69.381]      983.280 MW overflow in l2425 time  34 (pre-contingency)
+[      69.382]      864.290 MW overflow in l2432 time  35 (pre-contingency)
+[      69.383]      896.000 MW overflow in l2315 time  35 (pre-contingency)
+[      69.384]      901.560 MW overflow in l2284 time  35 (pre-contingency)
+[      69.385]      904.520 MW overflow in l2285 time  35 (pre-contingency)
+[      69.386]      983.280 MW overflow in l2425 time  35 (pre-contingency)
+[      69.387]      864.290 MW overflow in l2432 time  36 (pre-contingency)
+[      69.388]      896.000 MW overflow in l2315 time  36 (pre-contingency)
+[      69.389]      901.560 MW overflow in l2284 time  36 (pre-contingency)
+[      69.390]      904.520 MW overflow in l2285 time  36 (pre-contingency)
+[      69.390]      983.280 MW overflow in l2425 time  36 (pre-contingency)
+[      69.391] Setting MILP time limit to 1175.05 seconds
+[      69.391] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 271280 rows, 352872 columns and 960195 nonzeros
+Model fingerprint: 0xb00b915d
+Variable types: 291024 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+
+MIP start from previous solve produced solution with objective 6.12455e+07 (0.50s)
+Loaded MIP start from previous solve with objective 6.12455e+07
+
+Presolve removed 123816 rows and 241751 columns
+Presolve time: 3.09s
+Presolved: 147464 rows, 111121 columns, 557242 nonzeros
+Variable types: 63792 continuous, 47329 integer (47329 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   72311    9.4249292e+08   3.096258e+00   7.088041e+07      5s
+   72323    1.1147937e+09   0.000000e+00   7.497832e+08      5s
+  133924    3.4985367e+07   0.000000e+00   1.280578e+08     10s
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.318507e+07, 40430 iterations, 7.64 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.3185e+07    0  201 6.1245e+07 2.3185e+07  62.1%     -   12s
+H    0     0                    2.327536e+07 2.3185e+07  0.39%     -   12s
+
+Explored 1 nodes (41415 simplex iterations) in 12.97 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 2: 2.32754e+07 6.12455e+07 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 2.327536335745e+07, best bound 2.318506594707e+07, gap 0.3880%
+[      82.538] Verifying transmission limits...
+[      87.045] Verified transmission limits in 4.51 seconds
+[      87.045]       15.750 MW overflow in l2386 time   1 (pre-contingency)
+[      87.046]      168.110 MW overflow in l2431 time   1 (pre-contingency)
+[      87.047]      404.150 MW overflow in l2434 time   1 (pre-contingency)
+[      87.048]      712.795 MW overflow in l2314 time   1 (pre-contingency)
+[      87.049]       15.750 MW overflow in l2386 time   2 (pre-contingency)
+[      87.050]       99.608 MW overflow in l2431 time   2 (pre-contingency)
+[      87.051]      404.150 MW overflow in l2434 time   2 (pre-contingency)
+[      87.052]      505.000 MW overflow in l2314 time   2 (pre-contingency)
+[      87.053]       15.750 MW overflow in l2386 time   3 (pre-contingency)
+[      87.054]      149.310 MW overflow in l2434 time   3 (pre-contingency)
+[      87.055]      725.340 MW overflow in l2425 time   3 (pre-contingency)
+[      87.056]       15.750 MW overflow in l2386 time   4 (pre-contingency)
+[      87.057]      404.150 MW overflow in l2434 time   4 (pre-contingency)
+[      87.057]      725.340 MW overflow in l2425 time   4 (pre-contingency)
+[      87.058]       15.750 MW overflow in l2386 time   5 (pre-contingency)
+[      87.059]      338.383 MW overflow in l2434 time   5 (pre-contingency)
+[      87.060]      725.340 MW overflow in l2425 time   5 (pre-contingency)
+[      87.061]       15.750 MW overflow in l2386 time   6 (pre-contingency)
+[      87.062]      168.110 MW overflow in l2431 time   6 (pre-contingency)
+[      87.063]      404.150 MW overflow in l2434 time   6 (pre-contingency)
+[      87.064]      505.000 MW overflow in l2314 time   6 (pre-contingency)
+[      87.064]       75.180 MW overflow in l2386 time   7 (pre-contingency)
+[      87.065]      168.110 MW overflow in l2431 time   7 (pre-contingency)
+[      87.066]      404.150 MW overflow in l2434 time   7 (pre-contingency)
+[      87.067]      780.000 MW overflow in l2314 time   7 (pre-contingency)
+[      87.068]      134.600 MW overflow in l2386 time   8 (pre-contingency)
+[      87.069]      155.010 MW overflow in l2435 time   8 (pre-contingency)
+[      87.070]      168.110 MW overflow in l2431 time   8 (pre-contingency)
+[      87.070]      404.150 MW overflow in l2434 time   8 (pre-contingency)
+[      87.071]      948.000 MW overflow in l2425 time   8 (pre-contingency)
+[      87.072]      155.010 MW overflow in l2435 time   9 (pre-contingency)
+[      87.073]      168.110 MW overflow in l2431 time   9 (pre-contingency)
+[      87.074]      178.500 MW overflow in l2430 time   9 (pre-contingency)
+[      87.074]      404.150 MW overflow in l2434 time   9 (pre-contingency)
+[      87.075]      948.000 MW overflow in l2425 time   9 (pre-contingency)
+[      87.076]      168.110 MW overflow in l2431 time  10 (pre-contingency)
+[      87.077]      178.500 MW overflow in l2430 time  10 (pre-contingency)
+[      87.078]      402.250 MW overflow in l2435 time  10 (pre-contingency)
+[      87.078]      404.150 MW overflow in l2434 time  10 (pre-contingency)
+[      87.079]      780.000 MW overflow in l2314 time  10 (pre-contingency)
+[      87.080]      168.110 MW overflow in l2431 time  11 (pre-contingency)
+[      87.081]      178.500 MW overflow in l2430 time  11 (pre-contingency)
+[      87.082]      402.250 MW overflow in l2435 time  11 (pre-contingency)
+[      87.083]      404.150 MW overflow in l2434 time  11 (pre-contingency)
+[      87.083]      780.000 MW overflow in l2314 time  11 (pre-contingency)
+[      87.084]      168.110 MW overflow in l2431 time  12 (pre-contingency)
+[      87.085]      178.500 MW overflow in l2430 time  12 (pre-contingency)
+[      87.086]      402.250 MW overflow in l2435 time  12 (pre-contingency)
+[      87.087]      404.150 MW overflow in l2434 time  12 (pre-contingency)
+[      87.087]      780.000 MW overflow in l2314 time  12 (pre-contingency)
+[      87.088]      155.010 MW overflow in l2435 time  13 (pre-contingency)
+[      87.090]      168.110 MW overflow in l2431 time  13 (pre-contingency)
+[      87.091]      178.500 MW overflow in l2430 time  13 (pre-contingency)
+[      87.091]      404.150 MW overflow in l2434 time  13 (pre-contingency)
+[      87.092]      948.000 MW overflow in l2425 time  13 (pre-contingency)
+[      87.093]      134.600 MW overflow in l2386 time  14 (pre-contingency)
+[      87.094]      155.010 MW overflow in l2435 time  14 (pre-contingency)
+[      87.095]      168.110 MW overflow in l2431 time  14 (pre-contingency)
+[      87.096]      404.150 MW overflow in l2434 time  14 (pre-contingency)
+[      87.096]      983.280 MW overflow in l2425 time  14 (pre-contingency)
+[      87.097]      111.391 MW overflow in l2386 time  15 (pre-contingency)
+[      87.099]      155.010 MW overflow in l2435 time  15 (pre-contingency)
+[      87.099]      168.110 MW overflow in l2431 time  15 (pre-contingency)
+[      87.100]      404.150 MW overflow in l2434 time  15 (pre-contingency)
+[      87.101]      725.340 MW overflow in l2425 time  15 (pre-contingency)
+[      87.102]      134.600 MW overflow in l2386 time  16 (pre-contingency)
+[      87.103]      155.010 MW overflow in l2435 time  16 (pre-contingency)
+[      87.104]      168.110 MW overflow in l2431 time  16 (pre-contingency)
+[      87.105]      404.150 MW overflow in l2434 time  16 (pre-contingency)
+[      87.105]      940.715 MW overflow in l2425 time  16 (pre-contingency)
+[      87.106]       75.180 MW overflow in l2386 time  17 (pre-contingency)
+[      87.108]      155.010 MW overflow in l2435 time  17 (pre-contingency)
+[      87.109]      168.110 MW overflow in l2431 time  17 (pre-contingency)
+[      87.110]      404.150 MW overflow in l2434 time  17 (pre-contingency)
+[      87.110]      725.340 MW overflow in l2425 time  17 (pre-contingency)
+[      87.111]      168.110 MW overflow in l2431 time  18 (pre-contingency)
+[      87.112]      178.500 MW overflow in l2430 time  18 (pre-contingency)
+[      87.113]      402.250 MW overflow in l2435 time  18 (pre-contingency)
+[      87.114]      404.150 MW overflow in l2434 time  18 (pre-contingency)
+[      87.115]      780.000 MW overflow in l2314 time  18 (pre-contingency)
+[      87.116]      168.110 MW overflow in l2431 time  19 (pre-contingency)
+[      87.117]      178.500 MW overflow in l2430 time  19 (pre-contingency)
+[      87.118]      402.250 MW overflow in l2435 time  19 (pre-contingency)
+[      87.119]      404.150 MW overflow in l2434 time  19 (pre-contingency)
+[      87.120]      780.000 MW overflow in l2314 time  19 (pre-contingency)
+[      87.121]      168.110 MW overflow in l2431 time  20 (pre-contingency)
+[      87.122]      178.500 MW overflow in l2430 time  20 (pre-contingency)
+[      87.123]      402.250 MW overflow in l2435 time  20 (pre-contingency)
+[      87.124]      404.150 MW overflow in l2434 time  20 (pre-contingency)
+[      87.124]      780.000 MW overflow in l2314 time  20 (pre-contingency)
+[      87.125]      168.110 MW overflow in l2431 time  21 (pre-contingency)
+[      87.126]      178.500 MW overflow in l2430 time  21 (pre-contingency)
+[      87.127]      402.250 MW overflow in l2435 time  21 (pre-contingency)
+[      87.128]      404.150 MW overflow in l2434 time  21 (pre-contingency)
+[      87.129]      780.000 MW overflow in l2314 time  21 (pre-contingency)
+[      87.130]      155.010 MW overflow in l2435 time  22 (pre-contingency)
+[      87.131]      168.110 MW overflow in l2431 time  22 (pre-contingency)
+[      87.132]      178.500 MW overflow in l2430 time  22 (pre-contingency)
+[      87.133]      404.150 MW overflow in l2434 time  22 (pre-contingency)
+[      87.134]      948.000 MW overflow in l2425 time  22 (pre-contingency)
+[      87.135]       75.180 MW overflow in l2386 time  23 (pre-contingency)
+[      87.136]      155.010 MW overflow in l2435 time  23 (pre-contingency)
+[      87.137]      168.110 MW overflow in l2431 time  23 (pre-contingency)
+[      87.138]      404.150 MW overflow in l2434 time  23 (pre-contingency)
+[      87.139]      725.340 MW overflow in l2425 time  23 (pre-contingency)
+[      87.140]       58.599 MW overflow in l2386 time  24 (pre-contingency)
+[      87.141]      168.110 MW overflow in l2431 time  24 (pre-contingency)
+[      87.142]      404.150 MW overflow in l2434 time  24 (pre-contingency)
+[      87.143]      780.000 MW overflow in l2314 time  24 (pre-contingency)
+[      87.144]       15.750 MW overflow in l2386 time  25 (pre-contingency)
+[      87.145]      404.150 MW overflow in l2434 time  25 (pre-contingency)
+[      87.146]      505.000 MW overflow in l2314 time  25 (pre-contingency)
+[      87.147]       15.750 MW overflow in l2386 time  26 (pre-contingency)
+[      87.148]      404.150 MW overflow in l2434 time  26 (pre-contingency)
+[      87.149]      725.340 MW overflow in l2425 time  26 (pre-contingency)
+[      87.150]       15.750 MW overflow in l2386 time  27 (pre-contingency)
+[      87.152]      149.310 MW overflow in l2434 time  27 (pre-contingency)
+[      87.153]      621.000 MW overflow in l2315 time  27 (pre-contingency)
+[      87.154]       15.750 MW overflow in l2386 time  28 (pre-contingency)
+[      87.155]      149.310 MW overflow in l2434 time  28 (pre-contingency)
+[      87.156]      621.000 MW overflow in l2315 time  28 (pre-contingency)
+[      87.157]       15.750 MW overflow in l2386 time  29 (pre-contingency)
+[      87.158]      149.310 MW overflow in l2434 time  29 (pre-contingency)
+[      87.160]      622.406 MW overflow in l2425 time  29 (pre-contingency)
+[      87.161]       15.750 MW overflow in l2386 time  30 (pre-contingency)
+[      87.162]      404.150 MW overflow in l2434 time  30 (pre-contingency)
+[      87.163]      725.340 MW overflow in l2425 time  30 (pre-contingency)
+[      87.164]       15.750 MW overflow in l2386 time  31 (pre-contingency)
+[      87.165]      168.110 MW overflow in l2431 time  31 (pre-contingency)
+[      87.167]      404.150 MW overflow in l2434 time  31 (pre-contingency)
+[      87.168]      505.000 MW overflow in l2314 time  31 (pre-contingency)
+[      87.168]       75.180 MW overflow in l2386 time  32 (pre-contingency)
+[      87.170]      168.110 MW overflow in l2431 time  32 (pre-contingency)
+[      87.171]      404.150 MW overflow in l2434 time  32 (pre-contingency)
+[      87.172]      725.340 MW overflow in l2425 time  32 (pre-contingency)
+[      87.173]       75.180 MW overflow in l2386 time  33 (pre-contingency)
+[      87.174]      155.010 MW overflow in l2435 time  33 (pre-contingency)
+[      87.175]      168.110 MW overflow in l2431 time  33 (pre-contingency)
+[      87.176]      404.150 MW overflow in l2434 time  33 (pre-contingency)
+[      87.177]      725.340 MW overflow in l2425 time  33 (pre-contingency)
+[      87.177]      155.010 MW overflow in l2435 time  34 (pre-contingency)
+[      87.179]      168.110 MW overflow in l2431 time  34 (pre-contingency)
+[      87.180]      178.500 MW overflow in l2430 time  34 (pre-contingency)
+[      87.180]      404.150 MW overflow in l2434 time  34 (pre-contingency)
+[      87.181]      780.000 MW overflow in l2314 time  34 (pre-contingency)
+[      87.182]      168.110 MW overflow in l2431 time  35 (pre-contingency)
+[      87.183]      178.500 MW overflow in l2430 time  35 (pre-contingency)
+[      87.184]      271.348 MW overflow in l2435 time  35 (pre-contingency)
+[      87.185]      404.150 MW overflow in l2434 time  35 (pre-contingency)
+[      87.186]      780.000 MW overflow in l2314 time  35 (pre-contingency)
+[      87.187]      168.110 MW overflow in l2431 time  36 (pre-contingency)
+[      87.188]      178.500 MW overflow in l2430 time  36 (pre-contingency)
+[      87.189]      402.250 MW overflow in l2435 time  36 (pre-contingency)
+[      87.190]      404.150 MW overflow in l2434 time  36 (pre-contingency)
+[      87.191]      780.000 MW overflow in l2314 time  36 (pre-contingency)
+[      87.192] Setting MILP time limit to 1157.24 seconds
+[      87.192] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 271745 rows, 353027 columns and 961125 nonzeros
+Model fingerprint: 0xc1952039
+Variable types: 291179 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+
+MIP start from previous solve produced solution with objective 2.54124e+07 (0.52s)
+Loaded MIP start from previous solve with objective 2.54124e+07
+
+Presolve removed 124414 rows and 242039 columns
+Presolve time: 3.42s
+Presolved: 147331 rows, 110988 columns, 556965 nonzeros
+Variable types: 63659 continuous, 47329 integer (47329 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   54634    9.7476354e+08   1.742003e+02   5.042341e+09      5s
+   73286    1.3811761e+09   0.000000e+00   8.617872e+08      6s
+  145012    3.2828413e+07   0.000000e+00   8.141259e+07     10s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.345280e+07, 42542 iterations, 9.13 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.3453e+07    0  141 2.5412e+07 2.3453e+07  7.71%     -   14s
+H    0     0                    2.347108e+07 2.3453e+07  0.08%     -   14s
+
+Explored 1 nodes (43557 simplex iterations) in 14.52 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 2: 2.34711e+07 2.54124e+07 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 2.347108429602e+07, best bound 2.345280421067e+07, gap 0.0779%
+[     101.871] Verifying transmission limits...
+[     105.963] Verified transmission limits in 4.09 seconds
+[     105.963]       53.480 MW overflow in l2429 time   8 (pre-contingency)
+[     105.966]      178.500 MW overflow in l2430 time   8 (pre-contingency)
+[     105.967]        7.340 MW overflow in l2306 time   9 (pre-contingency)
+[     105.969]       53.480 MW overflow in l2429 time   9 (pre-contingency)
+[     105.970]      134.600 MW overflow in l2386 time   9 (pre-contingency)
+[     105.971]        7.340 MW overflow in l2306 time  10 (pre-contingency)
+[     105.972]       42.350 MW overflow in l2307 time  10 (pre-contingency)
+[     105.973]       53.480 MW overflow in l2429 time  10 (pre-contingency)
+[     105.974]      134.600 MW overflow in l2386 time  10 (pre-contingency)
+[     105.975]        7.340 MW overflow in l2306 time  11 (pre-contingency)
+[     105.976]       42.350 MW overflow in l2307 time  11 (pre-contingency)
+[     105.977]       53.480 MW overflow in l2429 time  11 (pre-contingency)
+[     105.978]      134.600 MW overflow in l2386 time  11 (pre-contingency)
+[     105.978]        7.340 MW overflow in l2306 time  12 (pre-contingency)
+[     105.980]       42.350 MW overflow in l2307 time  12 (pre-contingency)
+[     105.980]       53.480 MW overflow in l2429 time  12 (pre-contingency)
+[     105.981]      134.600 MW overflow in l2386 time  12 (pre-contingency)
+[     105.982]        7.340 MW overflow in l2306 time  13 (pre-contingency)
+[     105.983]       53.480 MW overflow in l2429 time  13 (pre-contingency)
+[     105.984]      134.600 MW overflow in l2386 time  13 (pre-contingency)
+[     105.985]       53.480 MW overflow in l2429 time  14 (pre-contingency)
+[     105.986]      178.500 MW overflow in l2430 time  14 (pre-contingency)
+[     105.987]       53.480 MW overflow in l2429 time  15 (pre-contingency)
+[     105.988]      102.951 MW overflow in l2430 time  15 (pre-contingency)
+[     105.989]       53.480 MW overflow in l2429 time  16 (pre-contingency)
+[     105.991]      178.500 MW overflow in l2430 time  16 (pre-contingency)
+[     105.992]       53.480 MW overflow in l2429 time  17 (pre-contingency)
+[     105.994]        7.340 MW overflow in l2306 time  18 (pre-contingency)
+[     105.996]       42.350 MW overflow in l2307 time  18 (pre-contingency)
+[     105.997]       53.480 MW overflow in l2429 time  18 (pre-contingency)
+[     105.998]      134.600 MW overflow in l2386 time  18 (pre-contingency)
+[     105.999]        7.340 MW overflow in l2306 time  19 (pre-contingency)
+[     106.001]       42.350 MW overflow in l2307 time  19 (pre-contingency)
+[     106.002]       53.480 MW overflow in l2429 time  19 (pre-contingency)
+[     106.003]      134.600 MW overflow in l2386 time  19 (pre-contingency)
+[     106.004]        7.340 MW overflow in l2306 time  20 (pre-contingency)
+[     106.006]       53.480 MW overflow in l2429 time  20 (pre-contingency)
+[     106.007]      134.600 MW overflow in l2386 time  20 (pre-contingency)
+[     106.008]        7.340 MW overflow in l2306 time  21 (pre-contingency)
+[     106.010]       53.480 MW overflow in l2429 time  21 (pre-contingency)
+[     106.011]      134.600 MW overflow in l2386 time  21 (pre-contingency)
+[     106.012]        7.340 MW overflow in l2306 time  22 (pre-contingency)
+[     106.014]       53.480 MW overflow in l2429 time  22 (pre-contingency)
+[     106.015]      134.600 MW overflow in l2386 time  22 (pre-contingency)
+[     106.016]        7.340 MW overflow in l2306 time  23 (pre-contingency)
+[     106.018]       53.480 MW overflow in l2429 time  23 (pre-contingency)
+[     106.019]      178.500 MW overflow in l2430 time  23 (pre-contingency)
+[     106.020]       53.480 MW overflow in l2429 time  32 (pre-contingency)
+[     106.021]      155.010 MW overflow in l2435 time  32 (pre-contingency)
+[     106.022]        7.340 MW overflow in l2306 time  33 (pre-contingency)
+[     106.024]       53.480 MW overflow in l2429 time  33 (pre-contingency)
+[     106.025]      178.500 MW overflow in l2430 time  33 (pre-contingency)
+[     106.026]        7.340 MW overflow in l2306 time  34 (pre-contingency)
+[     106.027]       53.480 MW overflow in l2429 time  34 (pre-contingency)
+[     106.028]      134.600 MW overflow in l2386 time  34 (pre-contingency)
+[     106.029]        7.340 MW overflow in l2306 time  35 (pre-contingency)
+[     106.031]       42.350 MW overflow in l2307 time  35 (pre-contingency)
+[     106.032]       53.480 MW overflow in l2429 time  35 (pre-contingency)
+[     106.033]      134.600 MW overflow in l2386 time  35 (pre-contingency)
+[     106.033]        7.340 MW overflow in l2306 time  36 (pre-contingency)
+[     106.035]       42.350 MW overflow in l2307 time  36 (pre-contingency)
+[     106.036]       53.480 MW overflow in l2429 time  36 (pre-contingency)
+[     106.037]      134.600 MW overflow in l2386 time  36 (pre-contingency)
+[     106.038] Setting MILP time limit to 1138.40 seconds
+[     106.038] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 271934 rows, 353090 columns and 961503 nonzeros
+Model fingerprint: 0x389b0b0c
+Variable types: 291242 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+
+MIP start from previous solve produced solution with objective 2.34875e+07 (0.52s)
+Loaded MIP start from previous solve with objective 2.34875e+07
+
+Presolve removed 124540 rows and 242039 columns
+Presolve time: 3.24s
+Presolved: 147394 rows, 111051 columns, 557224 nonzeros
+Variable types: 63722 continuous, 47329 integer (47329 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   52201    9.6724179e+08   1.997291e+00   9.114032e+08      5s
+   59545    1.5611673e+09   0.000000e+00   1.069276e+09      6s
+  122100    3.4216019e+07   0.000000e+00   5.163587e+07     10s
+Concurrent spin time: 0.03s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.348004e+07, 46190 iterations, 8.96 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.3480e+07    0  135 2.3487e+07 2.3480e+07  0.03%     -   14s
+
+Explored 0 nodes (48938 simplex iterations) in 14.45 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 1: 2.34875e+07 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 2.348749805127e+07, best bound 2.348004444283e+07, gap 0.0317%
+[     120.640] Verifying transmission limits...
+[     125.972] Verified transmission limits in 5.33 seconds
+[     125.973]        7.340 MW overflow in l2306 time   8 (pre-contingency)
+[     125.981]        7.340 MW overflow in l2306 time  14 (pre-contingency)
+[     125.986]       17.401 MW overflow in l2307 time  20 (pre-contingency)
+[     125.991]       42.350 MW overflow in l2307 time  34 (pre-contingency)
+[     125.997] Setting MILP time limit to 1118.44 seconds
+[     125.997] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 271946 rows, 353094 columns and 961527 nonzeros
+Model fingerprint: 0x15ba7288
+Variable types: 291246 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+
+MIP start from previous solve produced solution with objective 2.34876e+07 (0.81s)
+Loaded MIP start from previous solve with objective 2.34876e+07
+
+Presolve removed 124548 rows and 242039 columns
+Presolve time: 3.93s
+Presolved: 147398 rows, 111055 columns, 557242 nonzeros
+Variable types: 63726 continuous, 47329 integer (47329 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex
+Showing first log only...
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    9.9049638e+08   3.120465e+02   5.526732e+09      6s
+  101573    4.0572674e+07   0.000000e+00   5.210524e+08     10s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex
+
+Root relaxation: objective 2.348030e+07, 40429 iterations, 7.99 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 2.3480e+07    0  138 2.3488e+07 2.3480e+07  0.03%     -   14s
+
+Explored 0 nodes (43293 simplex iterations) in 14.16 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 1: 2.34876e+07 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 2.348760181159e+07, best bound 2.348029974199e+07, gap 0.0311%
+[     140.484] Verifying transmission limits...
+[     145.644] Verified transmission limits in 5.16 seconds
+[     145.644] No violations found
+[     145.644] MIP gap tolerance set to 0.001000
+[     145.644] Setting MILP time limit to 1098.79 seconds
+[     145.644] Solving MILP...
+Gurobi Optimizer version 9.0.0 build v9.0.0rc2 (linux64)
+Optimize a model with 271946 rows, 353094 columns and 961527 nonzeros
+Model fingerprint: 0x15ba7288
+Variable types: 291246 continuous, 61848 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e-01, 1e+03]
+  Objective range  [8e+00, 1e+05]
+  Bounds range     [4e-02, 4e+02]
+  RHS range        [4e-02, 1e+03]
+Presolved: 147398 rows, 111055 columns, 557242 nonzeros
+
+Continuing optimization...
+
+
+Explored 0 nodes (43293 simplex iterations) in 0.04 seconds
+Thread count was 4 (of 32 available processors)
+
+Solution count 1: 2.34876e+07 
+
+Optimal solution found (tolerance 1.00e-03)
+Best objective 2.348760181159e+07, best bound 2.348029974199e+07, gap 0.0311%
+[     145.685] Verifying transmission limits...
+[     150.011] Verified transmission limits in 4.33 seconds
+[     150.011] No violations found
+[     150.011] Total time was 122.53 seconds
+[     150.011] Writing: /local_workspace/kazaalek/uc/results_default/matpower/case1888rte/2017-01-21.1.sol.json
+[     152.638] Verifying solution...
+[     153.052] Exporting final model to /local_workspace/kazaalek/uc/results_default/matpower/case1888rte/2017-01-21.1.final.mps.gz
