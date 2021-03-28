@@ -73,14 +73,22 @@ function parse_save_cpx_cuts(file_name::String)
 
     ib_json_dict = Dict{String, Any}("file name" => file_name)
     mir_json_dict = Dict{String, Any}("file name" => file_name)
-    f_json_dict = Dict{String, Any}("file name" => file_name)
+    f_json_dict = Dict{String, Any}("file name" => file_name)       
+    all_cuts_json_dict = Dict{String, Any}("file name" => file_name)       
     dir_name = "./cuts/"
-    ib_cut_file = open(string(dir_name,file_name,"_ib.json"), "a"); 
-    mir_cut_file = open(string(dir_name,file_name,"_mir.json"), "a");
-    f_cut_file = open(string(dir_name,file_name,"_f.json"), "a");
+    ib_cut_file = open(string(dir_name,file_name,"_ib.json"), "w"); 
+    mir_cut_file = open(string(dir_name,file_name,"_mir.json"), "w");
+    f_cut_file = open(string(dir_name,file_name,"_f.json"), "w");
+    all_cut_file = open(string(dir_name,file_name,"_cuts.json"), "w");
+    cut_name_file = open(string(dir_name,"cut_names.txt"), "a");
+
+    all_cuts_dict = Dict{String, Any}()
     @info "Start parsing cuts"
-    cnt_ib = 0; cnt_mir = 0; cnt_f =0;
+    cnt_ib = 0; cnt_mir = 0; cnt_f =0; cnt_all = 0;
     for conRef in cons
+        if name(conRef)[begin] != 'c' && isdigit(name(conRef)[begin+1])
+            write(cut_name_file, string(name(conRef),"\n"))
+        end 
         if name(conRef)[begin] in ['i','f','m', 'r'] && isdigit(name(conRef)[begin+1])
             @info name(conRef)
             c = constraint_object(conRef)
@@ -88,25 +96,31 @@ function parse_save_cpx_cuts(file_name::String)
             dict = Dict(name(key)=> val for (key,val) in c.func.terms)
             dict["rhs"] = c.func.constant
 
+            cnt_all = cnt_all + 1
+            all_cuts_dict[cut_name] = dict;
             if name(conRef)[begin] == 'i' && isdigit(name(conRef)[2]) # implied bound cuts
-                ib_json_dict[cut_name] = dict
-                cnt_ib ++;
+                ib_json_dict[cut_name] = dict;
+                cnt_ib = cnt_ib + 1;
             elseif name(conRef)[begin] == 'm' && isdigit(name(conRef)[2])
-                mir_json_dict[cut_name] = dict
-                cnt_mir ++; 
+                mir_json_dict[cut_name] = dict;
+                cnt_mir = cnt_mir + 1;
             else name(conRef)[begin] == 'f' && isdigit(name(conRef)[2])
-                f_json_dict[cut_name] = dict
-                cnt_f ++;
+                f_json_dict[cut_name] = dict;
+                cnt_f = cnt_f + 1
             end
         end
     end
+    all_cuts_json_dict["cuts"] = all_cuts_dict;
     @info "Finished parsing. $(cnt_ib) implied bound cuts; $(cnt_mir) MIR cuts; $(cnt_f) flow cover cuts."
     write(ib_cut_file, JSON.json(ib_json_dict));                                            
     write(mir_cut_file, JSON.json(mir_json_dict));                                                
     write(f_cut_file, JSON.json(f_json_dict));
+    write(all_cut_file,JSON.json(all_cuts_json_dict))
     close(ib_cut_file)     
     close(mir_cut_file)
     close(f_cut_file)
+    close(all_cut_file)
+    close(cut_name_file)
 end    
           
 """

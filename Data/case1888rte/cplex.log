@@ -1,0 +1,61 @@
+
+Log started (V12.8.0.0) Mon Mar 22 11:29:37 2021
+
+
+Selected objective sense:  MINIMIZE
+Selected objective  name:  OBJ
+Selected RHS        name:  rhs
+Selected bound      name:  bounds
+
+Problem '2017-01-01.1.final.mps' read.
+Read time = 1.07 sec. (137.28 ticks)
+Tried aggregator 3 times.
+MIP Presolve eliminated 105703 rows and 220216 columns.
+MIP Presolve modified 11958 coefficients.
+Aggregator did 13443 substitutions.
+Reduced MIP has 152782 rows, 119429 columns, and 550420 nonzeros.
+Reduced MIP has 56169 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 1.18 sec. (864.09 ticks)
+Probing time = 0.43 sec. (28.45 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 360 rows and 360 columns.
+Reduced MIP has 152422 rows, 119069 columns, and 549100 nonzeros.
+Reduced MIP has 56169 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.67 sec. (362.99 ticks)
+Probing time = 0.26 sec. (24.43 ticks)
+Clique table members: 310254.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 10.11 sec. (3061.27 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   2.24611e+07   101                 2.24611e+07    14257         
+*     0+    0                       2.24842e+07   2.24611e+07             0.10%
+      0     0   2.24664e+07    87   2.24842e+07     Cuts: 101    14822    0.08%
+      0     0   2.24670e+07    87   2.24842e+07   MIRcuts: 60    15136    0.08%
+      0     0   2.24671e+07   126   2.24842e+07   MIRcuts: 42    15291    0.08%
+*     0+    0                       2.24674e+07   2.24671e+07             0.00%
+
+Flow cuts applied:  6
+Mixed integer rounding cuts applied:  64
+Gomory fractional cuts applied:  2
+
+Root node processing (before b&c):
+  Real time             =   20.20 sec. (8410.40 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =   20.20 sec. (8410.40 ticks)
+
+Solution pool: 3 solutions saved.
+
+MIP - Integer optimal, tolerance (0.0001/1e-06):  Objective =  2.2467373101e+07
+Current MIP best bound =  2.2467083719e+07 (gap = 289.381, 0.00%)
+Solution time =   20.20 sec.  Iterations = 15291  Nodes = 0 (1)
+Deterministic time = 8411.41 ticks  (416.35 ticks/sec)
+
