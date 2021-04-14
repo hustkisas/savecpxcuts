@@ -89,7 +89,7 @@ function parse_save_cpx_cuts(file_name::String)
         if name(conRef)[begin] != 'c' && isdigit(name(conRef)[begin+1])
             write(cut_name_file, string(name(conRef),"\n"))
         end 
-        if name(conRef)[begin] in ['i','f','m', 'r'] && isdigit(name(conRef)[begin+1])
+        if name(conRef)[begin] in ['i','f','m', 'r','L','z','v'] && isdigit(name(conRef)[begin+1])
             @info name(conRef)
             c = constraint_object(conRef)
             cut_name = name(conRef)
